@@ -5,7 +5,8 @@
     });
     
     $scope.paymentResource=new PaymentResource();
-
+    
+    
     $scope.updateReservation = function(paymentResource) {
     	paymentResource.$update().then(function(reservationResponse) {
     		   $scope.paymentResource=new PaymentResource();
@@ -16,7 +17,7 @@
     };
     
     $scope.settle = function(paymentResource) {
-    	paymentResource.$update().then(function(reservationResponse) {
+    	paymentResource.$update({action:'settle'}).then(function(reservationResponse) {
     		   $scope.paymentResource=new PaymentResource();
     		   $scope.paymentResponse = reservationResponse;
     		}, function(errResponse) {
@@ -25,7 +26,7 @@
     };
     
     $scope.refund = function(paymentResource) {
-    	paymentResource.$update().then(function(reservationResponse) {
+    	paymentResource.$update({action:'refund'}).then(function(reservationResponse) {
     		   $scope.paymentResource=new PaymentResource();
     		   $scope.paymentResponse = reservationResponse;
     		}, function(errResponse) {

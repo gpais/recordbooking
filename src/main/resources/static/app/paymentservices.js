@@ -2,8 +2,8 @@
 
   
   var PaymentFactory = function($resource) {
-	    return $resource('/payment', 
-	    		{},{
+	    return $resource('/payment/:action', 
+	    		{action: '@id'},{
 	      update: {
 	        method: "POST"
 	      },
