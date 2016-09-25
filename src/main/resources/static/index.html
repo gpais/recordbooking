@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet"
+	href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />
+</head>
+<body ng-app="myApp">
+
+	<div class="container" ng-controller="AppController">
+       <form>
+		<div class="form-group row">
+			<label for="example-text-input" class="col-xs-2 col-form-label">aereferece</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text"  ng-model="reservationResource.aeReference"
+					id="example-text-input">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="example-search-input" class="col-xs-2 col-form-label">ae
+				code</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="search" ng-model="reservationResource.aeCode"
+					id="example-search-input">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="example-email-input" class="col-xs-2 col-form-label">Email</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="email"
+					value="bootstrap@example.com" id="example-email-input">
+			</div>
+		</div>
+    <button ng-click="updateReservation(reservationResource)">Submit</button>
+</form>
+	</div>
+
+
+
+
+
+	<script type="text/javascript"
+		src="./bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript"
+		src="./bower_components/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript"
+		src="./bower_components/lodash/dist/lodash.min.js"></script>
+	<script type="text/javascript" src="./app/app.js"></script>
+	<script type="text/javascript" src="./app/controllers.js"></script>
+	<script type="text/javascript" src="./app/services.js"></script>
+</body>
+</html>
