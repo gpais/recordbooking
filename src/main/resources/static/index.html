@@ -6,46 +6,41 @@
 </head>
 <body ng-app="myApp">
 
-	<div class="container" ng-controller="AppController">
-       <form>
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-2 col-form-label">aereferece</label>
-			<div class="col-xs-10">
-				<input class="form-control" type="text"  ng-model="reservationResource.aeReference"
-					id="example-text-input">
-			</div>
-		</div>
-		<div class="form-group row">
-			<label for="example-search-input" class="col-xs-2 col-form-label">ae
-				code</label>
-			<div class="col-xs-10">
-				<input class="form-control" type="search" ng-model="reservationResource.aeCode"
-					id="example-search-input">
-			</div>
-		</div>
-		<div class="form-group row">
-			<label for="example-email-input" class="col-xs-2 col-form-label">Email</label>
-			<div class="col-xs-10">
-				<input class="form-control" type="email"
-					value="bootstrap@example.com" id="example-email-input">
-			</div>
-		</div>
-    <button ng-click="updateReservation(reservationResource)">Submit</button>
-</form>
-	</div>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">Mobacar Internal TOOL</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="reserve">Reservations</a></li>
+        <li><a ui-sref="payment">Payments</a></li>
+        <li><a ui-sref="about">About</a></li>
+    </ul>
+</nav>
 
+
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view=""></div>
+
+</div>
 
 
 
 
 	<script type="text/javascript"
 		src="./bower_components/angular/angular.min.js"></script>
-	<script type="text/javascript"
-		src="./bower_components/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	
 	<script type="text/javascript"
 		src="./bower_components/lodash/dist/lodash.min.js"></script>
 	<script type="text/javascript" src="./app/app.js"></script>
-	<script type="text/javascript" src="./app/controllers.js"></script>
-	<script type="text/javascript" src="./app/services.js"></script>
+	<script type="text/javascript" src="./app/reservationcontrollers.js"></script>
+	<script type="text/javascript" src="./app/reservationservices.js"></script>
+	<script type="text/javascript" src="./app/paymentcontrollers.js"></script>
+	<script type="text/javascript" src="./app/paymentservices.js"></script>	
 </body>
 </html>
